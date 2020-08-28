@@ -1,0 +1,11 @@
+/* <script>
+document.addEventListener('DOMContentLoaded', function(){ 
+	document.querySelector('.imapsContainer').addEventListener("mouseover", () => {
+			document.querySelector($country-conf").innerText = {$conf};	
+			document.querySelector($country-mu").innerText = {$muer};
+			document.querySelector($country-rec").innerText = {$rec};
+			document.querySelector($country-act").innerText = {$act};
+		}
+	);
+}, false);
+</script> */

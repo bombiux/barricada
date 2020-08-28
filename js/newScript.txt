@@ -1,0 +1,23 @@
+/* <script>
+document.addEventListener('DOMContentLoaded', function(){ 
+	document.querySelector('.imapsContainer').addEventListener("mouseover", () => {
+			document.querySelector($country-conf").innerText = {$conf};	
+			document.querySelector($country-mu").innerText = {$muer};
+			document.querySelector($country-rec").innerText = {$rec};
+			document.querySelector($country-act").innerText = {$act};
+		}
+	);
+}, false);
+</script> */
+
+echo <<<JS
+
+	<script>
+	document.addEventListener('DOMContentLoaded', function(){ 
+		document.querySelector('.imapsContainer').addEventListener("mouseover", () => {
+			iMapsData.data[0].roundMarkers[0].tooltipContent = `<p style="text-align: center;"><strong>HONDURAS</strong></p><br /> Confirmados <i id="gt-conf"> 200 </i><br /> Muertes <i id="gt-mu"> 1 </i><br /> Recuperados <i id="gt-rec"> 3 </i><br /> Activos <i id="gt-act"> 197 </i>`;	
+			}
+		);
+	}, false);
+	</script>
+	JS;

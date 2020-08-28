@@ -1,0 +1,487 @@
+/*!
+Theme Name: Barricada
+Theme URI: https://barricada.com.ni/
+Author: Barricada
+Author URI: https://barricada.com.ni/
+Description: Tema oficial portal Barricada
+Version: 1.0.0
+Text Domain: barricada
+Tags: Barricada, FSLN, Sandinista, Nicaragua
+*/
+:root {
+    /* Fuentes */
+    --fuentePrimaria: 'Gotham Black';
+    --fuenteTexto: 'Open Sans', sans-serif;
+    --Monoespacio: monospace;
+
+    /* Colores */
+    --rojo: #f00;
+    --rojoOscuro: brown;
+    --negro: #000;
+    --blanco: #fff;
+    --gris: #f3f3f3;
+    --grisMedio: #dfdfdf;
+    --grisOscuro: #202020;
+    --transparente: transparent;
+    
+}
+
+body {
+    font-size: 16px;
+    font-size: 1.6rem;
+    line-height: 2;
+    font-family: var(--fuenteTexto );
+    
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+main.container.pagina {
+    max-width: 1200px;
+    width: 75vw;
+    margin: 0 auto;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: var(--fuentePrimaria);
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 6rem;
+}
+
+h2 {
+    font-size: 4.8rem;
+}
+
+h3 {
+    font-size: 3.6rem;
+}
+
+h4 {
+    font-size: 2.4rem;
+}
+
+h5 {
+    font-size: 1.2rem;
+}
+
+.contenedor {
+    max-width: 1200px;
+    width: 95%;
+    margin: 0 auto;
+}
+
+#masthead, .site-branding {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.header-container {
+    width: 100vw;
+}
+
+.menu-bar {
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid #ececec;
+    border-bottom: 1px solid #ececec;
+    text-transform: uppercase;
+    padding: 0.5rem 0 0.3rem 0;
+    color: var(--negro);
+    text-decoration: none;
+    font-family: var(--fuentePrimaria);
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+}
+
+a, a:visited {
+    color: var(--negro);
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+}
+.menu a {
+    padding: 0 1rem;
+}
+.menu li:not(:last-child) {
+    margin-right: 0.5rem;
+    transition: 0.6s;
+    border-bottom: 2px solid transparent;
+}
+
+.menu li:hover:not(:last-child) {
+    border-bottom: 2px solid black;
+}
+
+.current-menu-item > a, .current-menu-parent > a {
+    display: block;
+    z-index: 1;
+    position: relative;
+    color: var(--blanco);
+    padding: 0 1rem;
+}
+
+.current-menu-item > a::before,
+.current-menu-item > a::after,
+.current-menu-parent > a::before,
+.current-menu-parent > a::after {
+    position: absolute;
+    z-index: -1;
+    content: '';
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 50%;
+}
+.current-menu-item > a::before, .current-menu-parent > a::before {
+    top: 0;
+    background-color: var(--rojo);
+}
+.current-menu-item > a::after,
+.current-menu-parent > a::after {
+    bottom: 0;
+    background-color: var(--negro);
+}
+
+ul ul {
+    display: none;
+}
+
+li:hover > ul {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--rojoOscuro);
+    position: absolute;
+    right: 250px;
+}
+
+#content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.site-content .post {
+    max-width: 1200px;
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+}
+
+.thumb-cont {
+    height: 630px;
+    overflow: hidden;
+}
+
+.thumb-cont img {
+    width: 100%;
+}
+
+figcaption {
+    background-color: var(--gris);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+figcaption small {
+    font-family: var(--Monoespacio);
+    font-style: italic;
+}
+
+.post-content {
+    width: 95%;
+    max-width: 1000px;
+    align-self: center;
+}
+
+.entry > p {
+    margin-bottom: 3rem;
+}
+
+.entry blockquote {
+    margin: 3rem;
+    padding: 5rem;
+    border: 1px solid var(--negro);
+    box-shadow: 5px 5px 0 black;
+}
+
+.post-content small {
+    font-family: var(--Monoespacio);
+    text-transform: uppercase;
+    padding: 3rem;
+}
+
+.entry > p:first-of-type::first-letter {
+    color: var(--rojo);
+    float: left;
+    font-family: var(--fuenteTexto);
+    font-size: 75px;
+    line-height: 62px;
+    padding-top: 4px;
+    padding-right: 8px;
+    padding-left: 3px;
+}
+
+.spicewpsearchform{
+    width: 890px;
+    position: absolute;
+    right: 286px;
+    top: 146px;
+    z-index: 9999;
+    background: #fff;
+}
+
+.spicewpsearchform input[type="text"] {
+    width: 100%;
+    height: auto;
+    border: 1px solid #000000;
+    padding: 13px 60px;
+    border-radius: 0px !important;
+}
+
+.spicewpsearchform input[type="submit"] {
+    line-height: 1;
+    padding: 14px 20px;
+    border-radius: 0px;
+    height: auto;
+    font-size: 15px;
+    display: inline-block;
+    border: 1px solid #000000;
+}
+
+/**Css for image search icon**/
+.spicewpsearch_icon {
+   background-image: url('img/search.png');
+   background-repeat: no-repeat;
+   padding: 0 0 0 36px;
+   background-position: 5px center;
+   background-color: var(--transparente);
+   background-size: 18px 18px;
+}
+
+.contenido-principal {
+    display: flex;
+    justify-content: center;
+}
+
+.destacadas {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 75vw;
+    height: calc((75vw*0.55)/1.91);
+}
+
+.destacadas a {
+    display: flex;
+    align-items: flex-end;
+}
+
+.destacadas a:first-child {
+    flex-basis: calc((75vw*0.55)/1.91);
+    flex-shrink: 0;
+    width: calc(75vw*0.55);
+    overflow: hidden;
+}
+
+.destacadas a:nth-child(2), .destacadas a:nth-child(3) {
+    flex-basis: calc(((75vw*0.55)/1.91)/2);
+    width: calc(75vw/4);
+    overflow: hidden;
+}
+
+.destacadas a:last-child {
+    flex-grow: 1;
+    width: calc(75vw/5);
+}
+
+.noticia-destacada {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    height: 100%;
+}
+
+.noticia-destacada h2 {
+    position: absolute;
+    width: 100%;
+    bottom: -10px;
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,0.7959558823529411) 25%, rgba(1,0,12,0.6026785714285714) 75%, rgba(0,0,0,0) 100%);
+    color: var(--blanco);
+    font-size: 1.5rem;
+    padding: 2.6rem 1rem 1rem;
+    text-transform: uppercase;
+    margin: 1rem 0;
+}
+
+.destacadas a:first-child h2 {
+    font-size: 2.5rem;
+}
+
+.noticia-destacada img {
+    object-fit: cover;
+}
+
+footer {
+    background-color: var(--grisOscuro);
+    height: 20rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10rem;
+}
+
+.site-info span{
+    color: var(--gris);
+    font-family: var(--Monoespacio);
+    font-weight: bolder;
+    font-size: 2rem;
+}
+
+.site-info span a{
+    color: var(--gris);
+}
+
+.title {
+    background: var(--rojo);
+    padding: 0 0 0.6rem 4rem;
+    color: var(--blanco);
+    box-shadow: inset 20px -5px 0 0px var(--negro);
+    margin: 1rem 0;
+}
+
+.cuatro {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cuatro a {
+    flex-basis: 24%;
+}
+
+.cuatro img {
+    width: 100%;
+    height: calc((75vw*0.24)/1.91);
+    object-fit: cover;
+}
+
+.cuatro h5 {
+    padding: 0px 1rem;
+    text-align: justify;
+    line-height: 1.7rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    height: 3.2rem;
+}
+
+.cuatro hr {
+    margin: 1rem 0;
+    background-color: var(--grisMedio);
+    border: 0;
+    height: 0.9px;
+}
+
+.cuatro p {
+    padding: 0px 1rem;
+    text-align: justify;
+    line-height: 2rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    font-size: 1.2rem;
+}
+
+.cuatro div {
+    background-color: var(--gris);
+    padding-bottom: 1rem;
+}
+
+.video {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: var(--negro);
+    height: 50rem;
+}
+
+iframe {
+    width: 90%;
+    height: 80%;
+}
+
+.newsletter {
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0;
+    padding: 5rem 0;
+    background: var(--negro);
+    color: var(--blanco);
+    font-family: var(--fuenteTexto);
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.newsletter p {
+    margin-right: 1rem;
+}
+
+.newsletter div {
+    border: 1px solid var(--blanco);
+    width: 40rem;
+    padding: 0 5rem;
+}
+
+.newsletter button {
+    background-color: var(--blanco);
+    color: black;
+    border: 1px solid var(--blanco);
+    font-weight: 900;
+    font-family: var(--fuentePrimaria);
+    font-size: 2rem;
+    width: 40px;
+}
+
+/* g.imapsSprite-group.imapsContainer-group.imapsMapObject-group.imapsMapImage-group, g.imapsSprite-group.imapsContainer-group.imapsTooltip-group {
+    transform: translateX(570px) translateY(70px);
+}
+
+g#id-187, g#id-129,  {
+    transform: translateX(-520px) translateY(10px);
+} */
+.page-id-261300 #content {
+    flex-direction: column;
+}
+
+#covid-title, #stats {
+    width: 80%;
+    max-width: 1000px;
+    display: block;
+    margin: 0 auto;
+}
+
+.page-id-261300 h6 {
+    font-size: x-large;
+    background-color: #777;
+    width: fit-content;
+    padding: 0 10px;
+    color: white;
+}
+
+.pag
